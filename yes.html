@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <style>/*
+        * Section for specifying the style of native HTML tags
+        */
+        *{
+            font-family: "Yellowtail", cursive;
+            color: #2f2f2f;
+
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Dancing Script', cursive;
+            overflow: hidden;
+        }
+        
+        #myVideo{
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width:auto;
+            height: auto;
+            z-index: -1;
+            object-fit: cover;
+        }
+        
+        div {
+            background-image: radial-gradient(circle at center,rgb(255, 129, 150), rgb(255, 120, 188));
+
+            font-size: 25px;
+            background-color: rgb(216, 105, 179);
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            padding: 20px;
+            margin: 10px auto;
+            width: 50%;
+            border-radius: 1rem;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .poetry {
+            font-family: 'Dancing Script', cursive;
+            font-size:30px; 
+            text-align: center;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @media screen and (max-width: 768px) {
+            body {
+                height: auto;
+                padding: 20px;
+            }
+
+            div {
+                width: 80%;
+                font-size: 20px;
+                padding: 15px;
+            }
+
+            .poetry {
+                font-size: 25px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            div {
+                width: 90%;
+                font-size: 18px;
+                padding: 10px;
+            }
+
+            .poetry {
+                font-size: 20px;
+            }
+        }
+        </style> 
+</head>
+
+<body>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="istockphoto-821407358-640_adpp_is.mp4" type="video/mp4">
+    </video>
+    <div>
+        <b style="font-size: larger;">I LOVE YOU</b>
+        <br>
+        You probably wonder why I love you…
+        <br>
+        And that’s ok.
+        <br>
+        What you really don’t know is that I ask myself that question every single day. Every day I find new reasons for
+        loving you even more.
+        <br>
+        <span class="poetry">
+            <!-- <span>तेरे ज़ील से आँखों में डूबना चाहता हूँ ✨</span>
+            <span>तेरे गुलाबी गालों को सँवारना चाहता हूँ 🌹</span>
+            <span>तेरे होंठों की मीठास में खो जाना चाहता हूँ 😊</span>
+            <span>अगर तू हाँ बोले,</span>
+            <span>पूरी ज़िंदगी तेरे साथ गुज़ारना चाहता हूँ ❤️</span> -->
+            <span>My Heart Belongs to You</span>
+            <span>From the moment I met you, I knew you were special.</span>
+            <span>You light up my life in ways I never thought possible.</span>
+        </span>
+    </div>
+    
+
+</body>
+
+</html>

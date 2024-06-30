@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propose</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Yellowtail", cursive;
+            font-weight: 300;
+            /* font-style: normal; */
+            color: #222222;
+        }
+
+        body {
+            background-image: linear-gradient(to right, whitesmoke, red);
+            justify-content: center;
+
+        }
+
+        div {
+            margin: 2rem auto;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .love {
+            font-size: 5rem;
+        }
+
+        .yes_but {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .yes_but button {
+            padding: 10px 20px;
+            border: none;
+            background-color: transparent;
+            border: 2px solid rgb(73, 68, 68);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            /* display: block; */
+            font-size: 1.6rem;
+            cursor: pointer;
+            border-radius: 3rem;
+            transition: background-color 0.3s ease-in;
+            animation: reverse;
+        }
+
+        .yes_but button:hover {
+            background-color: #1b1818;
+            /* color: white; */
+        }
+
+        a {
+            text-decoration: none;
+            color: #222222;
+        }
+
+        .yes_but button a:hover {
+            color: rgb(175, 172, 172);
+        }
+
+        .btn-group {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        button {
+            position: absolute;
+            /* position:relative; */
+            width: 150px;
+            /* width: 40%; */
+            height: inherit;
+            color: white;
+            font-size: 1.2em;
+            border-radius: 30px;
+            outline: none;
+            cursor: pointer;
+            box-shadow: 0 2px 4px gray;
+            border: 2px solid #e94d58;
+            font-size: 1.2em;
+            /* transition: 2s ease .3s ; */
+            /* transition:all 0.3s ease .3; */
+        }
+
+        button:nth-child(1) {
+            margin-left: -200px;
+            /* margin-left: 10px; */
+            background: #e94d58;
+        }
+
+        button:nth-child(2) {
+            margin-right: -200px;
+            /* margin-left: 10px; */
+            background: white;
+            color: #e94d58;
+
+        }
+
+        @media screen and (max-width: 768px) {
+            .love {
+                font-size: 3rem;
+            }
+
+            div {
+                font-size: 1rem;
+            }
+            button{
+                width: 30%;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="love"><b>I LOVE YOU</b></div>
+    <div>बारिश और आपकी बातें, एक समान हैं, 🌹</div>
+    <div>दोनों कुछ पल के लिए होते हैं,</div>
+    <div>फर्क सिर्फ इतना है कि, 🍂</div>
+    <div>बारिश मेरे दिल को सुकून देती हैं। 🌧</div>
+    <div>और आपकी बातें मेरे दिल को खुशियाँ देती हैं 💞</div>
+    <div class="love" style="font-size: 3em;">Do you love me?</div>
+    <div class="btn-group">
+        <button class="yes-btn"><a href="yes.html">Yes</a></button>
+        <button class="no-btn">No</button>
+    </div>
+    <!-- <audio id="audi" src="_Premika_Ne_Pyar_Se_Bgm_Instrumental_Music_Ringtone_(by Fringster.com).mp3" autoplay loop>this is not supppported</audio> -->
+
+    <script>
+        function color() {
+            let v1 = Math.floor(Math.random() * 255 + 0)
+            let v2 = Math.floor(Math.random() * 255 + 0)
+            let v3 = Math.floor(Math.random() * 255 + 0)
+            let v4 = Math.floor(Math.random() * 255 + 0)
+            let v5 = Math.floor(Math.random() * 255 + 0)
+            let v6 = Math.floor(Math.random() * 255 + 0)
+
+
+            return `linear-gradient(to right,rgb(${v1}, ${v2}, ${v3}),rgb(${v4}, ${v5}, ${v6}))`;
+
+        }
+        setInterval(() => {
+            document.body.style.background = color();
+        }, 500);
+
+        const noBth = document.querySelector(".no-btn")
+        window.resizeTo(400, 300);
+        noBth.addEventListener('mouseover',()=>{
+            const noBtnRect = noBth.getBoundingClientRect();
+            const maxX = window.innerWidth - noBtnRect.width;
+            const maxY = window.innerHeight - noBtnRect.height;
+
+            const randX = Math.floor(Math.random()*(maxX));
+            const randY = Math.floor(Math.random()*(maxY));
+
+            noBth.style.right = randX + "px";
+            noBth.style.left = randX + "px";
+            noBth.style.top = randY + "px";
+            noBth.style.bottom = randY + "px";
+        });
+        // function moveButton() {
+        //     const maxX = window.innerWidth - noBtn.offsetWidth;
+        //     const maxY = window.innerHeight - noBtn.offsetHeight;
+
+        //     const randX = Math.floor(Math.random() * maxX);
+        //     const randY = Math.floor(Math.random() * maxY);
+
+        //     noBtn.style.left = randX + "px";
+        //     noBtn.style.top = randY + "px";
+        // }
+
+        // noBtn.addEventListener('mouseover', moveButton);
+        // noBtn.addEventListener('touchstart', moveButton);
+
+    </script>
+</body>
+
+</html>
